@@ -13,10 +13,14 @@ export const Header: React.FC = () => (
 
     <a
       href="#"
-      aria-label="Lycoris - Home"
-      className="pointer-events-auto bg-white border-2 border-ivy px-8 py-3 font-black text-2xl tracking-tighter stamp-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all focus:outline-none focus:ring-4 focus:ring-ivy/50"
+      aria-label="Lycoris by Gregorious AI Studio - Home"
+      className="pointer-events-auto bg-white border-2 border-ivy px-8 py-3 font-black text-xl tracking-tighter stamp-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all focus:outline-none focus:ring-4 focus:ring-ivy/50 flex items-center gap-3"
     >
-      LYCORIS<span className="text-coral" aria-hidden="true">✿</span>
+      <span className="text-3xl" aria-hidden="true">🤖</span>
+      <div className="flex flex-col leading-none">
+        <span className="text-sm tracking-wider opacity-60">GREGORIOUS AI</span>
+        <span className="text-2xl">LYCORIS<span className="text-coral">✿</span></span>
+      </div>
     </a>
 
     <nav className="hidden md:flex gap-1 pointer-events-auto bg-white border-2 border-ivy p-1 stamp-shadow" aria-label="Main navigation">
@@ -40,7 +44,13 @@ export const Footer: React.FC = () => (
 
     <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 items-start relative z-10">
       <div className="lg:col-span-2">
-         <h2 className="text-5xl font-black tracking-tighter mb-6 italic text-ivy underline decoration-coral decoration-4 underline-offset-8">LYCORIS<span className="text-honey" aria-hidden="true">*</span></h2>
+         <div className="flex items-center gap-4 mb-6">
+           <span className="text-6xl" aria-hidden="true">🤖</span>
+           <div>
+             <div className="text-xl font-black tracking-wider text-ivy/60 uppercase">Gregorious AI Studio</div>
+             <h2 className="text-5xl font-black tracking-tighter italic text-ivy underline decoration-coral decoration-4 underline-offset-8">LYCORIS<span className="text-honey" aria-hidden="true">*</span></h2>
+           </div>
+         </div>
          <p className="text-xl font-medium leading-relaxed max-w-sm text-ivy/70">
            A contemporary atelier exploring the organic intersection of botanical beauty and digital logic.
          </p>
@@ -59,7 +69,7 @@ export const Footer: React.FC = () => (
       </nav>
     </div>
     <div className="max-w-[1400px] mx-auto mt-20 pt-8 border-t border-ivy/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[0.7rem] font-black uppercase tracking-[0.4em] text-ivy opacity-40">
-       <p>© 2025 Lycoris Botanical Atelier. Cultivating Brilliance.</p>
+       <p>© 2026 Gregorious AI Studio. Powered by Innovation.</p>
        <div className="flex gap-4 items-center" role="presentation" aria-hidden="true">
          <div className="w-4 h-4 rounded-full bg-wasabi"></div>
          <div className="w-4 h-4 rounded-full bg-coral"></div>
