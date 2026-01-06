@@ -13,7 +13,7 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen font-sans selection:bg-wasabi selection:text-ivy overflow-x-hidden bg-cardstock">
       <Header />
-      <main>
+      <main id="main-content">
         <Hero />
         
         {/* Animated Botanical Divider */}
@@ -25,15 +25,15 @@ const App: React.FC = () => {
         <About />
 
         {/* Harvest Statistics */}
-        <section className="px-6 lg:px-24 py-48 bg-cardstock relative overflow-hidden">
-           <div className="absolute top-0 left-0 w-full h-full bg-wasabi/5 opacity-50 pointer-events-none blur-[150px]"></div>
+        <section className="px-6 lg:px-24 py-48 bg-cardstock relative overflow-hidden" aria-label="Company statistics">
+           <div className="absolute top-0 left-0 w-full h-full bg-wasabi/5 opacity-50 pointer-events-none blur-[150px]" aria-hidden="true"></div>
            <div className="max-w-[1500px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
              {STATS.map((stat, i) => (
                <div key={i} className={`bg-white p-14 border-2 border-ivy stamp-shadow transition-all duration-700 hover:-translate-y-4 hover:-rotate-1 flex flex-col justify-between h-[450px] group`}>
-                 <p className={`font-serif text-8xl font-bold italic leading-none ${stat.color} group-hover:scale-110 transition-transform`}>{stat.value}</p>
+                 <p className={`font-serif text-8xl font-bold italic leading-none ${stat.color} group-hover:scale-110 transition-transform`} aria-label={`${stat.value} ${stat.label}`}>{stat.value}</p>
                  <div className="pt-10 border-t border-ivy/10">
                    <p className="text-[0.75rem] font-black uppercase tracking-[0.5em] opacity-40 text-ivy">{stat.label}</p>
-                   <div className="h-4 w-full bg-ivy/5 mt-6 overflow-hidden rounded-full relative">
+                   <div className="h-4 w-full bg-ivy/5 mt-6 overflow-hidden rounded-full relative" role="presentation">
                       <div className={`h-full bg-current transition-all duration-1000 ${stat.color} w-3/4`}></div>
                    </div>
                  </div>
@@ -80,22 +80,22 @@ const App: React.FC = () => {
         </section>
 
         {/* Testimonial Bloom */}
-        <section className="bg-ivy py-64 px-8 relative overflow-hidden soft-torn border-y-4 border-wasabi">
-           <div className="absolute inset-0 pointer-events-none">
+        <section className="bg-ivy py-64 px-8 relative overflow-hidden soft-torn border-y-4 border-wasabi" aria-label="Client testimonial">
+           <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
               <div className="absolute top-0 right-0 w-full h-full bg-wasabi/10 animate-petal-drift"></div>
               <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-coral/5 blur-3xl rounded-full"></div>
            </div>
            <div className="max-w-[1200px] mx-auto text-center relative z-10">
-              <p className="text-wasabi text-[15rem] font-serif block mb-12 leading-none opacity-40">✿</p>
-              <p className="font-serif text-6xl md:text-8xl font-bold italic text-white leading-tight mb-32 drop-shadow-2xl">
+              <p className="text-wasabi text-[15rem] font-serif block mb-12 leading-none opacity-40" aria-hidden="true">✿</p>
+              <blockquote className="font-serif text-6xl md:text-8xl font-bold italic text-white leading-tight mb-32 drop-shadow-2xl">
                 A masterpiece of growth. They didn't just build our brand; they <span className="underline decoration-wasabi decoration-8 underline-offset-8">harvested our soul</span> and made it bloom.
-              </p>
-              
+              </blockquote>
+
               <div className="inline-flex flex-col items-center">
-                 <div className="w-32 h-32 bg-white p-4 border-2 border-ivy mb-10 -rotate-6 stamp-shadow overflow-hidden group">
+                 <div className="w-32 h-32 bg-white p-4 border-2 border-ivy mb-10 -rotate-6 stamp-shadow overflow-hidden group" aria-hidden="true">
                     <div className="w-full h-full bg-gradient-to-tr from-wasabi via-coral to-honey animate-petal-drift rounded-full transition-transform group-hover:scale-125"></div>
                  </div>
-                 <h4 className="text-5xl font-black text-white tracking-tighter">Sarah Chen</h4>
+                 <cite className="text-5xl font-black text-white tracking-tighter not-italic">Sarah Chen</cite>
                  <p className="text-[0.8rem] uppercase tracking-[0.6em] text-wasabi font-black mt-6">Atelier Director, Terre & Stone</p>
               </div>
            </div>
