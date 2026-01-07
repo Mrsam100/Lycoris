@@ -2,7 +2,7 @@
 import React from 'react';
 
 export const Header: React.FC = () => (
-  <header className="fixed top-6 left-0 right-0 z-[1000] px-6 flex justify-between items-center pointer-events-none">
+  <header className="absolute top-6 left-0 right-0 z-[1000] px-6 flex justify-between items-center pointer-events-none">
     {/* Skip to main content link for accessibility */}
     <a
       href="#main-content"
@@ -14,13 +14,9 @@ export const Header: React.FC = () => (
     <a
       href="#"
       aria-label="Lycoris by Gregorious AI Studio - Home"
-      className="pointer-events-auto bg-white border-2 border-ivy px-8 py-3 font-black text-xl tracking-tighter stamp-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all focus:outline-none focus:ring-4 focus:ring-ivy/50 flex items-center gap-3"
+      className="pointer-events-auto bg-white border-2 border-ivy px-8 py-3 font-black text-2xl tracking-tighter stamp-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all focus:outline-none focus:ring-4 focus:ring-ivy/50"
     >
-      <span className="text-3xl" aria-hidden="true">🤖</span>
-      <div className="flex flex-col leading-none">
-        <span className="text-sm tracking-wider opacity-60">GREGORIOUS AI</span>
-        <span className="text-2xl">LYCORIS<span className="text-coral">✿</span></span>
-      </div>
+      LYCORIS<span className="text-coral">✿</span>
     </a>
 
     <nav className="hidden md:flex gap-1 pointer-events-auto bg-white border-2 border-ivy p-1 stamp-shadow" aria-label="Main navigation">
@@ -42,19 +38,7 @@ export const Footer: React.FC = () => (
        <div className="w-[40vw] h-[40vw] bg-wasabi rounded-full blur-[100px] animate-petal-drift"></div>
     </div>
 
-    <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 items-start relative z-10">
-      <div className="lg:col-span-2">
-         <div className="flex items-center gap-4 mb-6">
-           <span className="text-6xl" aria-hidden="true">🤖</span>
-           <div>
-             <div className="text-xl font-black tracking-wider text-ivy/60 uppercase">Gregorious AI Studio</div>
-             <h2 className="text-5xl font-black tracking-tighter italic text-ivy underline decoration-coral decoration-4 underline-offset-8">LYCORIS<span className="text-honey" aria-hidden="true">*</span></h2>
-           </div>
-         </div>
-         <p className="text-xl font-medium leading-relaxed max-w-sm text-ivy/70">
-           A contemporary atelier exploring the organic intersection of botanical beauty and digital logic.
-         </p>
-      </div>
+    <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start relative z-10">
       <div className="space-y-6">
          <h3 className="text-[0.7rem] font-black uppercase tracking-[0.4em] text-coral opacity-60">Studio Root</h3>
          <address className="font-serif text-lg italic text-ivy not-italic">Dubai Design District<br/>Greenhouse 09, Bloom Way</address>
